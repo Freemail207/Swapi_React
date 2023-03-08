@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "baseUrl": "src/",
+    "sourceMap": true,
+    "module": "esnext", // add this line
+    "target": "es5",
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "./node_modules/phaser/types"
+    ],
+    "types": [
+      "Phaser"
+    ],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext",
+      "ScriptHost"
+    ],
+    "paths": {
+      "@store": ["store"],
+      "@store/*": ["store/*"],
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@constants": ["constants"],
+      "@constants/*": ["constants/*"],
+      "@screens": ["screens"],
+      "@screens/*": ["screens/*"],
+      "@i18n": ["i18n"],
+      "@i18n/*": ["i18n/*"],
+      "@config": ["config"],
+      "@config/*": ["config/*"],
+      "@navigation": ["navigation"],
+      "@navigation/*": ["navigation/*"],
+      "@services": ["services"],
+      "@services/*": ["services/*"],
+      "@utilities": ["utilities"],
+      "@utilities/*": ["utilities/*"],
+      "@styles": ["styles"],
+      "@styles/*": ["styles/*"],
+      "@assets": ["assets"],
+      "@assets/*": ["assets/*"],
+      "@theme": ["styles/theme"],
+      "@types": ["types"]
+    }
+  },
+  "plugins": [{ "name": "typescript-plugin-css-modules" }],
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules", "pwa"
+  ]
+}
