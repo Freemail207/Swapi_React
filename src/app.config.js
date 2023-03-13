@@ -1,4 +1,4 @@
 export default {
   ENV: 'development',
-  ORIGIN_URL: 'test_request',
+  ORIGIN_URL: 'https://swapi.dev/api',
 };

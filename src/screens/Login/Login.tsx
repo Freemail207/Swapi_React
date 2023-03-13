@@ -7,7 +7,7 @@ const Login = () => {
     const navigator = useNavigate();
 
     return (
-        <div className={classes.loginRoot} onClick={() =>{navigator('/Game')}}>
+        <div className={classes.loginRoot} onClick={() =>{navigator('/Films')}}>
             <div> Login</div>
         </div>
     );

@@ -13,6 +13,7 @@ module.exports = {
     // webpack 5 comes with devServer which loads in development mode
     devServer: {
         port: 8080,
+        host: '127.0.0.1',
         static: true,
         historyApiFallback: true,
     },

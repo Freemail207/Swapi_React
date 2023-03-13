@@ -1,6 +1,8 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { applyMiddleware, compose } from 'redux';
+import { legacy_createStore as createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { IS_DEV } from '../constants/constants';
+import { IS_DEV } from '@constants/constants';
+import {composeWithDevTools} from 'redux-devtools-extension';
 /** bred */
 import { createBrowserHistory } from 'history';
 import * as initializationActions from './initialization/actions';
@@ -16,9 +18,10 @@ const sagaMiddleware = createSagaMiddleware();
 /** Initializing store */
 const store = createStore(
   rootReducer,
-  IS_DEV
-    ? compose(applyMiddleware(sagaMiddleware))
-    : compose(applyMiddleware(sagaMiddleware)),
+    IS_DEV ?
+    composeWithDevTools(
+        applyMiddleware(sagaMiddleware)
+    ) : applyMiddleware(sagaMiddleware)
 );
 
 /** Starting sagas */
