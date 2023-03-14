@@ -1,5 +1,7 @@
-import { IAuthState } from './auth/types';
+import { IFilmsListState } from './films/types';
+import { ICharacterListState } from './characters/types';
 
 export interface IRootState {
-  auth: IAuthState;
+  films: IFilmsListState;
+  characters: ICharacterListState;
 }

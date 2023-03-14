@@ -6,7 +6,6 @@ interface IProps {
   isLoggedIn: boolean;
   userRole: string;
 }
-console.log('BBBB');
 const Navigation = (props: IProps) => useRoutes(CONFIG.Public.routes(props.isLoggedIn, props.userRole));
 
 export default Navigation;
