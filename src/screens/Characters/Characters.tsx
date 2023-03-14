@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as charactersAction from '@store/characters/actions';
 
 
-const Game = () => {
+const Characters = () => {
     const classes = useStyles();
     const [pending, setPending] = useState(true);
     const dispatch = useDispatch();
@@ -29,4 +29,5 @@ const Game = () => {
         </div>
     );
 }
-export default Game;
+export default Characters;
+
