@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as filmsActions from '@store/films/actions';
 
 
-const Game = () => {
+const Films = () => {
     const classes = useStyles();
     const [pending, setPending] = useState(true);
     const dispatch = useDispatch();
@@ -24,9 +24,9 @@ const Game = () => {
         loadFilms();
     }, []);
     return (
-        <div className={classes.filmsRoot} style={{backgroundColor: pending ? 'green' : "red"}}>
-            Game
+        <div className={classes.root} style={{backgroundColor: pending ? 'green' : "red"}}>
+            Films
         </div>
     );
 }
-export default Game;
+export default Films;

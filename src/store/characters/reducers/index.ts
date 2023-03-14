@@ -1,7 +1,7 @@
 import CharacterActionTypes from '../actions/types';
 import { ICharacterListState } from '../types';
 
-export default function films(state: ICharacterListState = {} as ICharacterListState, action: any) {
+export default function characters(state: ICharacterListState = {} as ICharacterListState, action: any) {
   switch (action.type) {
     case CharacterActionTypes.SET_CHARACTERS_INFO:
       return {
