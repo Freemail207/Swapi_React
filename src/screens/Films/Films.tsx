@@ -3,6 +3,7 @@ import { useStyles } from './Films.styles';
 import { useDispatch, useSelector } from 'react-redux';
 /** Films */
 import * as filmsActions from '@store/films/actions';
+import PageContainer from "@components/PageContainer";
 
 
 const Films = () => {
@@ -24,9 +25,11 @@ const Films = () => {
         loadFilms();
     }, []);
     return (
-        <div className={classes.root} style={{backgroundColor: pending ? 'green' : "red"}}>
-            Films
-        </div>
+        <PageContainer>
+            <div className={classes.filmRoot} style={{backgroundColor: pending ? 'green' : "red"}}>
+                Films
+            </div>
+        </PageContainer>
     );
 }
 export default Films;

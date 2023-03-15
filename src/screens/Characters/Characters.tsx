@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import { useStyles } from './Characters.styles';
 import { useDispatch, useSelector } from 'react-redux';
-/** Films */
+/** Components */
+import PageContainer from '@components/PageContainer'
+/** Characters */
 import * as charactersAction from '@store/characters/actions';
 
 
@@ -24,9 +26,11 @@ const Characters = () => {
         loadCharacters();
     }, []);
     return (
-        <div className={classes.root} style={{backgroundColor: pending ? 'green' : "red"}}>
-            Characters
-        </div>
+        <PageContainer>
+            <div className={classes.root} style={{backgroundColor: pending ? 'green' : "red"}}>
+                Characters
+            </div>
+        </PageContainer>
     );
 }
 export default Characters;
