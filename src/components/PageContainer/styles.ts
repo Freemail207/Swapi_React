@@ -6,6 +6,7 @@ export const useStyles = createUseStyles({
     backgroundPosition:'center',
     backgroundSize: '100% 100%',
     backgroundImage: 'url("images/stars.jpg")',
+    height: '100%',
   },
   contentContainer: {
     display: 'flex',
